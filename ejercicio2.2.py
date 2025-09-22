@@ -1,0 +1,5 @@
+euros = input("Introduce la cantidad en euros: ")
+tasaInteres = input("Introduce la tasa de interés (en porcentaje): ")
+anos = input("Introduce el número de años: ")
+cantidadeFinal = float(euros) * (1 + float(tasaInteres) / 100) ** int(anos)
+print("La cantidad final después de", anos, "años es:", round(cantidadeFinal, 2), "euros")
