@@ -14,7 +14,7 @@ def calcularFactorial(n):
 n = []
 x = 0
 while True:
-    n.append(int(input("({x})Introduce números entero no negativo(-1 para salir): ")))
+    n.append(int(input(f"{x}Introduce números entero no negativo(-1 para salir): ")))
     x = x + 1
     if n[-1] == -1:
         n.pop()
