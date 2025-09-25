@@ -30,14 +30,14 @@ class Persoa2:
         self.nome = nome
         self.dni = dni
         self.idade = idade
-        
-        
+
+
 class Posto2:
     def __init__(self, tarefa, horario, remuneracion, **outros):
         self.tarefa = tarefa  # corregido error de 'tareja' a 'tarefa'
         self.horario = horario
         self.remuneracion = remuneracion
-        
+
 class Traballador2(Persoa2, Posto2):
     def __init__(self, nome, dni, idade, tarefa, horario, remuneracion, NUSS):
         Persoa2.__init__(self, nome=nome, dni=dni, idade=idade)
@@ -46,3 +46,50 @@ class Traballador2(Persoa2, Posto2):
 
 t = Traballador2("Manuel", "356L",34, "limpiar","8-15", 1200, "56456456K")
 print(t)
+
+class Persoa3:
+    def __init__(self, nome, dni, idade):
+        self.setNome(nome)
+        self.setDni(dni)
+        self.setIdade(idade)
+
+
+    def setDni(self,dni):
+        if type(dni) == str:
+            if len(dni) == 9:
+                self.dni = dni
+            else:
+                self.dni = "00000000X"  # opción por defecto si la longitud es >= 9
+        else:
+            self.dni = "00000000X"
+
+    def getDni(self):
+        return self.dni
+    def setNome(self,nome):
+        if type(nome)==str:
+            self.nome = nome
+        else:
+            self.nome = "Sen nome"
+    def getNome(self):
+        return self.nome
+    def setIdade(self,idade):
+        if type(idade)==int:
+            if idade>=0 and idade<100:
+                self.idade = idade
+            else:
+                self.idade = 0
+        else:
+            self.idade = 0
+    def getIdade(self):
+        return self.idade
+    def amosar(self):
+        print(f"Nome: {self.getNome()}, DNI: {self.getDni()}, Idade: {self.getIdade()}")
+
+    def __str__(self):
+        return f"Nome: {self.getNome()}, DNI: {self.getDni()}, Idade: {self.getIdade()}"
+
+p = Persoa3("Manuel", "356L",34)
+p.amosar()
+p.setDni(345345)
+
+p.amosar()
