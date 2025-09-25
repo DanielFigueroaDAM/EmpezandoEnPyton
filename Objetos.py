@@ -82,14 +82,19 @@ class Persoa3:
             self.idade = 0
     def getIdade(self):
         return self.idade
-    def amosar(self):
-        print(f"Nome: {self.getNome()}, DNI: {self.getDni()}, Idade: {self.getIdade()}")
-
     def __str__(self):
         return f"Nome: {self.getNome()}, DNI: {self.getDni()}, Idade: {self.getIdade()}"
+    def __eq__(self, other):
+        return self.dni == other.dni
+    def __ne__(self, other):
+        return self.dni != other.dni
+    def __len__(self):
+        return len(self.nome)
 
 p = Persoa3("Manuel", "356L",34)
-p.amosar()
+
 p.setDni(345345)
 
-p.amosar()
+
+
+print (p.getDni() == "00000000X")
