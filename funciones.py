@@ -38,9 +38,3 @@ persoa("Manolo","56456456K", edade=44, altura=1.23, ocupado=True)
 
 
 
-
-
-
-
-
-
