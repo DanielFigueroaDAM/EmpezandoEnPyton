@@ -31,3 +31,16 @@ persoa("Manolo","56456456K", edade=44, altura=1.23, ocupado=True)
 #si la funcion me devuelve varios parametros y solo quiero recoger uno , seria -> _,variable =funcionSumaMedia(var)
 # _,h    h,_   h,h
 
+
+
+
+
+
+
+
+
+
+
+
+
+
